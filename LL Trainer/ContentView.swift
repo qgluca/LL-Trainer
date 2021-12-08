@@ -100,7 +100,7 @@ struct ContentView: View {
                 Image(currentCase)
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 200, height: 200, alignment: .top)
+                    .frame(width: 170, height: 170, alignment: .top)
                     .padding()
                 Text(self.timerString)
                     .font(Font.system(size: 60, design: .monospaced))
@@ -207,7 +207,7 @@ struct ContentView: View {
                 
                 Toggle(isOn: $probabilityCheck) {
                     Text("Correct probability. Each case has a % chance of occurring equal to that of it occurring in an actual solve.")
-                        .frame(width: 200)
+                        .frame(width: 160)
                 }.toggleStyle(CheckboxToggleStyle())
                     .onChange(of: probabilityCheck) { value in
                         if value {
@@ -315,9 +315,11 @@ struct ContentView: View {
                 .disabled(isTimerRunning)
                 .padding()
                 
-                Text("INSTRUCTIONS\n-Use the spacebar to start/stop the timer\n-The time is accepted on next start,\n  if not discarded\n-Click on a case on the right to enable/disable it")
+                Text("INSTRUCTIONS\n-Use the spacebar to start/stop the timer\n-The time is accepted on next start,\n  if not discarded\n-Click on a case on the right to enable/\n  disable it")
                     .font(.caption)
+                    .frame(width: 210)
                     .padding(.top, 100)
+                    
             }
             
             TabView(selection: $selectedTab) {

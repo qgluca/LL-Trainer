@@ -12,7 +12,7 @@ struct LL_TrainerApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .frame(minWidth: 1700, maxWidth: .infinity,
+                .frame(minWidth: 1620, maxWidth: .infinity,
                        minHeight: 900, maxHeight: .infinity)
         }
         .commands {
